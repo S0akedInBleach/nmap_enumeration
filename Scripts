@@ -1,0 +1,4 @@
+#dns brute forcing 
+nmap --script dns-brute --script-args dns-brute.domain=$DOMAIN$.com --dns-servers $10.0.10.10$
+
+nmap --dns-servers $10.0.10.10$ --script dns-brute --script-args dns-brute.domain=$domain.com$,dns-brute.hostlist="C:\Program Files (x86)\Nmap\nselib\data\%some.lst$"
