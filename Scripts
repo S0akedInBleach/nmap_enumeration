@@ -2,3 +2,8 @@
 nmap --script dns-brute --script-args dns-brute.domain=$DOMAIN$.com --dns-servers $10.0.10.10$
 
 nmap --dns-servers $10.0.10.10$ --script dns-brute --script-args dns-brute.domain=$domain.com$,dns-brute.hostlist="C:\Program Files (x86)\Nmap\nselib\data\%some.lst$"
+
+#genaric web service finder with http-title and further enumeration if found 
+nmap  -p 80,443,8000,8080,8443 --script=http-title $IP RANGE$
+
+nmap  -p 80,443,8000,8080,8443 --script=http-enum $IP RANGE$
